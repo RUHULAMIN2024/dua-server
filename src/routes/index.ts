@@ -1,17 +1,21 @@
 import { Router } from 'express';
-import { UserRoutes } from '../module/user/user.route';
 import { CategoriesRouts } from '../module/categories/categories.route';
+import { SUBCategoriesRouts } from '../module/subcategories/subcategories.route';
 
 const router = Router();
 
 const moduleRoutes = [
   {
-    path: '/auth',
-    route: UserRoutes,
+    path: '/dua',
+    route: DuaRoutes,
   },
   {
     path: '/categories',
     route: CategoriesRouts,
+  },
+  {
+    path: '/sub-categories',
+    route: SUBCategoriesRouts,
   },
 ];
 
