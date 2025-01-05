@@ -1,14 +1,11 @@
 import { Router } from 'express';
 import { CategoriesRouts } from '../module/categories/categories.route';
 import { SUBCategoriesRouts } from '../module/subcategories/subcategories.route';
+import { DuasRouts } from '../module/duas/duas.route';
 
 const router = Router();
 
 const moduleRoutes = [
-  {
-    path: '/dua',
-    route: DuaRoutes,
-  },
   {
     path: '/categories',
     route: CategoriesRouts,
@@ -16,6 +13,10 @@ const moduleRoutes = [
   {
     path: '/sub-categories',
     route: SUBCategoriesRouts,
+  },
+  {
+    path: '/dua',
+    route: DuasRouts,
   },
 ];
 
