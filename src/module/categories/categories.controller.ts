@@ -4,7 +4,7 @@ import sendResponse from '../../utils/sendResponse';
 import { CategoriesService } from './categories.service';
 
 const getAllCategories = catchAsync(async (req, res) => {
-  const result = await CategoriesService.getAllCategories(req.query);
+  const result = await CategoriesService.getAllCategories();
 
   sendResponse(res, {
     statusCode: StatusCodes.OK,

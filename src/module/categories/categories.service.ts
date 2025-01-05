@@ -6,7 +6,7 @@ import AppError from '../../errors/AppError';
 import { Categories } from './categories.model';
 import mongoose from 'mongoose';
 
-const getAllCategories = async (query: Record<string, unknown>) => {
+const getAllCategories = async () => {
   const result = await Categories.find();
 
   return result;

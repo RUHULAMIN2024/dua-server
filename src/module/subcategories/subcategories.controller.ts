@@ -1,19 +1,19 @@
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../utils/catchAsync';
 import sendResponse from '../../utils/sendResponse';
-import { CategoriesService } from './subcategories.service';
+import { SubCategoriesService } from './subcategories.service';
 
-const getAllCategories = catchAsync(async (req, res) => {
-  const result = await CategoriesService.getAllCategories(req.query);
+const getAllSubCategories = catchAsync(async (req, res) => {
+  const result = await SubCategoriesService.getAllSubCategories();
 
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,
-    message: 'Categories are retrieved successfully',
+    message: 'SubCategories are retrieved successfully',
     data: result,
   });
 });
 
-export const CategoriesController = {
-  getAllCategories,
+export const SubCategoriesController = {
+  getAllSubCategories,
 };

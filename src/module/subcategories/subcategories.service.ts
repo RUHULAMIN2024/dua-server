@@ -6,12 +6,12 @@ import AppError from '../../errors/AppError';
 import { SubCategories } from './subcategories.model';
 import mongoose from 'mongoose';
 
-const getAllCategories = async (query: Record<string, unknown>) => {
+const getAllSubCategories = async () => {
   const result = await SubCategories.find();
 
   return result;
 };
 
-export const CategoriesService = {
-  getAllCategories,
+export const SubCategoriesService = {
+  getAllSubCategories,
 };
