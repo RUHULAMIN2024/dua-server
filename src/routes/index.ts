@@ -15,7 +15,7 @@ const moduleRoutes = [
     route: SUBCategoriesRouts,
   },
   {
-    path: '/dua',
+    path: '/duas',
     route: DuasRouts,
   },
 ];
