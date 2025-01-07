@@ -4,7 +4,7 @@ import sendResponse from '../../utils/sendResponse';
 import { DuasService } from './duas.service';
 
 const getAllDuas = catchAsync(async (req, res) => {
-  const result = await DuasService.getAllDuas();
+  const result = await DuasService.getAllDuas(req.query);
 
   sendResponse(res, {
     statusCode: StatusCodes.OK,
